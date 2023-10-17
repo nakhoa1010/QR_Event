@@ -1,5 +1,6 @@
 import qrcode
-img = qrcode.make('EventA-abc125xyz')
+datain = input('Nhap QRID: ')
+img = qrcode.make(datain)
 type(img)  # qrcode.image.pil.PilImage
-img.save("notavailable.png")
-print("Done")
+img.save(datain +  ".jpg")
+print("Save to: " + datain + ".jpg")
