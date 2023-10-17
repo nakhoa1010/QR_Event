@@ -10,7 +10,7 @@ def capture(image_name):
         # Check if 10 seconds have passed
         if time.time() - start_time >= 5:
             # Save the image
-            save_path = "face_detection\\image\\" + image_name 
+            save_path = "facepath\\" + image_name 
             cv2.imwrite(save_path, frame)
             break
         # Display the resulting frame
@@ -20,9 +20,9 @@ def capture(image_name):
         # Break the loop if 'q' key is pressed
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-    path = "K:\\Documents\\PyCharmProject\\QR_Event\\face_detection\\image\\" +  image_name
+    path = "facepath\\" +  image_name
     return path
     cap.release()
     cv2.destroyAllWindows()
 # if __name__ == "__main__":
-#     print('save to:' + capture('ID001.jpg'))
+#     print('save to: ' + capture('ID001.jpg'))
